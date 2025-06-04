@@ -1,4 +1,5 @@
 SERVICE=nextjs
+GRAPHQL=graphql
 
 # 起動
 up:
@@ -27,7 +28,10 @@ clean:
 
 # コンテナに入る (開発用)
 shell:
-	docker compose exec $(SERVICE) sh
+	docker compose exec $(SERVICE) bash
+
+gshell:
+	docker compose exec $(GRAPHQL) bash
 
 # npm install
 install:
